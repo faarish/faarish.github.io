@@ -3,6 +3,7 @@
   --text: #4b3f2f;     /* Deep brown text */
   --accent: #a67c52;   /* Medium brown accent */
   --hover: #c8a97e;    /* Light brown hover */
+  --para-color: black;       /* light mode */
 }
 
 body.dark {
@@ -86,6 +87,10 @@ nav a:hover {
 .hero h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--para-color);
 }
 
 section {
@@ -255,5 +260,6 @@ footer {
     white-space: nowrap;      /* ✅ keep items in one row */
   }
 }
+
 
 
