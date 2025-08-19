@@ -218,9 +218,10 @@ footer {
 
 
 /* Tablet + Mobile: logo on line 1, links on line 2 spread across */
+/* Tablet + Mobile: logo first line, links second line */
 @media (max-width: 1024px) {
   nav {
-    flex-direction: column;   /* ✅ stack logo on top */
+    flex-direction: column;   /* stack vertically */
     align-items: center;
   }
 
@@ -231,15 +232,18 @@ footer {
   }
 
   nav ul {
-    flex-wrap: wrap;          /* ✅ allow wrapping */
-    justify-content: center;  /* ✅ spread across */
-    gap: 1rem 2rem;
+    display: flex;
+    flex-wrap: nowrap;        /* ✅ prevent wrapping */
+    justify-content: center;  /* ✅ center horizontally */
     width: 100%;
+    overflow-x: auto;         /* ✅ allow horizontal scroll if too many links */
+    gap: 1rem 2rem;
   }
 
   nav ul li {
-    flex: unset;              /* ✅ let items size naturally */
+    flex: unset;              /* don’t stretch, keep natural width */
     text-align: center;
+    white-space: nowrap;      /* ✅ keep items in one row */
   }
 }
 
