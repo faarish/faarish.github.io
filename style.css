@@ -220,6 +220,11 @@ footer {
 /* Tablet + Mobile: logo on line 1, links on line 2 spread across */
 /* Tablet + Mobile: logo first line, links second line */
 @media (max-width: 1024px) {
+
+  header {
+    padding: 0;
+}
+  
   nav {
     flex-direction: column;   /* stack vertically */
     align-items: center;
@@ -250,6 +255,7 @@ footer {
     white-space: nowrap;      /* ✅ keep items in one row */
   }
 }
+
 
 
 
