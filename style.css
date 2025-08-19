@@ -212,3 +212,68 @@ footer {
   color: var(--text);
   border-top: 1px solid var(--accent);
 }
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  .project-card {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  nav h1 {
+    margin-bottom: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    width: 95%; /* Fit better on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    align-items: center;
+  }
+
+  nav h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 100%; /* Full-width buttons on mobile */
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
