@@ -261,6 +261,10 @@ footer {
   }
 }
 
+#typing-container {
+  min-height: 1.5em; /* ✅ reserve height */
+}
+
 .cursor {
   display: inline-block;
   margin-left: 2px;
@@ -269,10 +273,10 @@ footer {
 }
 
 @keyframes blink {
-  0%   { opacity: 1; }
-  50%  { opacity: 0; }
-  100% { opacity: 1; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
+
 
 
 
