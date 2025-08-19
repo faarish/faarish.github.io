@@ -238,6 +238,8 @@ footer {
     width: 100%;
     overflow-x: auto;         /* ✅ allow horizontal scroll if too many links */
     gap: 1rem 0.5rem;
+    margin: 0rem;
+    
   }
 
   nav ul li {
@@ -246,6 +248,7 @@ footer {
     white-space: nowrap;      /* ✅ keep items in one row */
   }
 }
+
 
 
 
