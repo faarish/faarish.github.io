@@ -16,6 +16,11 @@ body.dark {
   --text: #f5f5dc;
   --accent: #c8a97e;
   --hover: #a67c52;
+  --nav-bg: radial-gradient(circle at top left, #2b3d2b, transparent 70%),
+             radial-gradient(circle at top right, #2b3d2b, transparent 70%),
+             radial-gradient(circle at bottom left, #2b3d2b, transparent 70%),
+             radial-gradient(circle at bottom right, #2b3d2b, transparent 70%),
+             #3b4d3b;   /* lighter center for contrast */
 }
 
 body.dark form input,
@@ -281,6 +286,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
