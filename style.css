@@ -42,7 +42,10 @@ nav {
   background-color: var(--bg);
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  flex-wrap: nowrap;  /* ✅ prevent wrapping on desktop */
 }
+
 
 nav h1 {
   margin: 0;
@@ -214,23 +217,29 @@ footer {
 }
 
 
-/* Two-line navigation for small screens */
-@media (max-width: 768px) {
-  nav ul {
-    flex-wrap: wrap;       /* Allow wrapping */
-    justify-content: center;
-    gap: 0.5rem 1.5rem;    /* Row and column spacing */
-  }
-
-  nav ul li {
-    flex: 1 1 40%;         /* Each item takes ~40% width → 2 items per row */
-    text-align: center;
+/* Tablet + Mobile: logo on line 1, links on line 2 spread across */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;   /* ✅ stack logo on top */
+    align-items: center;
   }
 
   nav h1 {
-    width: 100%;           /* Logo takes full line above links */
+    width: 100%;
     text-align: center;
     margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;          /* ✅ allow wrapping */
+    justify-content: center;  /* ✅ spread across */
+    gap: 1rem 2rem;
+    width: 100%;
+  }
+
+  nav ul li {
+    flex: unset;              /* ✅ let items size naturally */
+    text-align: center;
   }
 }
 
