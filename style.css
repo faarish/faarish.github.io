@@ -222,7 +222,7 @@ footer {
 @media (max-width: 1024px) {
 
   header {
-    padding: 0;
+    padding: 0.5rem;
 }
   
   nav {
@@ -255,9 +255,5 @@ footer {
     white-space: nowrap;      /* ✅ keep items in one row */
   }
 }
-
-
-
-
 
 
