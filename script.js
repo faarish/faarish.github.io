@@ -118,9 +118,5 @@ window.onclick = (event) => {
   }
 };
 
-// Hamburger Menu Toggle
-document.getElementById("hamburger").addEventListener("click", () => {
-  document.getElementById("nav-links").classList.toggle("show");
-});
 
 
