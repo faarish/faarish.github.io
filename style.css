@@ -15,12 +15,11 @@ body.dark {
 }
 
 body.dark nav {
-  background: 
-    radial-gradient(circle at top left, #2b3d2b, transparent 70%),
-    radial-gradient(circle at top right, #2b3d2b, transparent 70%),
-    radial-gradient(circle at bottom left, #2b3d2b, transparent 70%),
-    radial-gradient(circle at bottom right, #2b3d2b, transparent 70%),
-    #3b4d3b;  /* base center color */
+  background: radial-gradient(circle at top left, #1f2e1f 0%, transparent 60%),
+              radial-gradient(circle at top right, #1f2e1f 0%, transparent 60%),
+              radial-gradient(circle at bottom left, #1f2e1f 0%, transparent 60%),
+              radial-gradient(circle at bottom right, #1f2e1f 0%, transparent 60%),
+              #3b4d3b; /* lighter middle */
 }
 
 body.dark form input,
@@ -54,12 +53,11 @@ nav {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
   flex-wrap: nowrap;  /* ✅ prevent wrapping on desktop */
-   background: 
-    radial-gradient(circle at top left, #b0c9a4, transparent 70%),
-    radial-gradient(circle at top right, #b0c9a4, transparent 70%),
-    radial-gradient(circle at bottom left, #b0c9a4, transparent 70%),
-    radial-gradient(circle at bottom right, #b0c9a4, transparent 70%),
-    #d6e0c4;  /* base center color */
+   background: radial-gradient(circle at top left, #6b8f71 0%, transparent 60%),
+              radial-gradient(circle at top right, #6b8f71 0%, transparent 60%),
+              radial-gradient(circle at bottom left, #6b8f71 0%, transparent 60%),
+              radial-gradient(circle at bottom right, #6b8f71 0%, transparent 60%),
+              #d6e0c4; /* light center */
 }
 
 
@@ -291,6 +289,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
