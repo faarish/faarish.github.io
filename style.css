@@ -4,12 +4,7 @@
   --accent: #a67c52;   /* Medium brown accent */
   --hover: #c8a97e;    /* Light brown hover */
   --para-color: black;      
-  --nav-bg: radial-gradient(circle at top left, #b0c9a4, transparent 70%),
-             radial-gradient(circle at top right, #b0c9a4, transparent 70%),
-             radial-gradient(circle at bottom left, #b0c9a4, transparent 70%),
-             radial-gradient(circle at bottom right, #b0c9a4, transparent 70%),
-             #d6e0c4;   /* light center */
-}
+ }
 
 body.dark {
   --bg: #4b3f2f;
@@ -22,6 +17,15 @@ body.dark {
              radial-gradient(circle at bottom left, #2b3d2b, transparent 70%),
              radial-gradient(circle at bottom right, #2b3d2b, transparent 70%),
              #3b4d3b;   /* lighter center for contrast */
+}
+
+body.dark nav {
+  background: 
+    radial-gradient(circle at top left, #2b3d2b, transparent 70%),
+    radial-gradient(circle at top right, #2b3d2b, transparent 70%),
+    radial-gradient(circle at bottom left, #2b3d2b, transparent 70%),
+    radial-gradient(circle at bottom right, #2b3d2b, transparent 70%),
+    #3b4d3b;  /* base center color */
 }
 
 body.dark form input,
@@ -51,11 +55,16 @@ nav {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  background: var(--nav-bg);
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
   flex-wrap: nowrap;  /* ✅ prevent wrapping on desktop */
+   background: 
+    radial-gradient(circle at top left, #b0c9a4, transparent 70%),
+    radial-gradient(circle at top right, #b0c9a4, transparent 70%),
+    radial-gradient(circle at bottom left, #b0c9a4, transparent 70%),
+    radial-gradient(circle at bottom right, #b0c9a4, transparent 70%),
+    #d6e0c4;  /* base center color */
 }
 
 
@@ -287,6 +296,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
