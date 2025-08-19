@@ -55,7 +55,7 @@ nav h1 {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem 2 rem;
+  gap: 1rem 2rem;
   margin: 0;
   padding: 0;
 }
@@ -237,7 +237,7 @@ footer {
     justify-content: center;  /* ✅ center horizontally */
     width: 100%;
     overflow-x: auto;         /* ✅ allow horizontal scroll if too many links */
-    gap: 1rem;
+    gap: 1rem 0.5rem;
   }
 
   nav ul li {
@@ -246,5 +246,6 @@ footer {
     white-space: nowrap;      /* ✅ keep items in one row */
   }
 }
+
 
 
