@@ -4,6 +4,11 @@
   --accent: #a67c52;   /* Medium brown accent */
   --hover: #c8a97e;    /* Light brown hover */
   --para-color: black;       /* light mode */
+  --nav-bg: radial-gradient(circle at top left, #b0c9a4, transparent 70%),
+             radial-gradient(circle at top right, #b0c9a4, transparent 70%),
+             radial-gradient(circle at bottom left, #b0c9a4, transparent 70%),
+             radial-gradient(circle at bottom right, #b0c9a4, transparent 70%),
+             #d6e0c4;   /* light center */
 }
 
 body.dark {
@@ -40,7 +45,7 @@ nav {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  background-color: var(--bg);
+  background: var(--nav-bg);
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
@@ -276,6 +281,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
