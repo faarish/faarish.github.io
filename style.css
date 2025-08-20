@@ -152,7 +152,7 @@ section h2 {
 .skill-bar span {
   display: block;
   margin-bottom: 0.3rem;
-  font-weight: bold;
+ /* font-weight: bold;  */
 }
 
 .bar {
@@ -305,6 +305,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
