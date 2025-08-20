@@ -302,9 +302,12 @@ footer {
   animation: blink 0.7s infinite;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .project-card {
     flex: 1 1 100%;   /* on small screens: 1 per row */
+  }
+  .skill-bar {
+    flex: 1 1 100%;
   }
 }
 
@@ -314,11 +317,6 @@ footer {
 }
 
 
-* On smaller screens (mobile), make the skills stack */
-@media (max-width: 768px) {
-  .skill-bar {
-    flex: 1 1 100%;
-  }
-}
+
 
 
