@@ -145,10 +145,10 @@ section h2 {
   background: var(--hover);
 }
 
-#skills {
+.skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* space between items */
+  gap: 20px; /* space between skills */
 }
 
 .skill-bar {
@@ -320,4 +320,5 @@ footer {
     flex: 1 1 100%;
   }
 }
+
 
