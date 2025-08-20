@@ -295,10 +295,17 @@ footer {
   animation: blink 0.7s infinite;
 }
 
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%;   /* on small screens: 1 per row */
+  }
+}
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
