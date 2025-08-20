@@ -1,7 +1,7 @@
 
 // Typing effect
 const typedText = document.getElementById("typed-text");
-const phrases = ["Software Solutions", "Web Developer", "Creative Designer", "Tech Enthusiast", "Technology Explorer", "Future Innovator"];
+const phrases = ["Digital Craftsman", "Product Builder", "Creative Designer", "Technology Explorer", "Future Innovator", "Full-Stack Developer"];
 let index = 0, charIndex = 0;
 
 function type() {
@@ -117,6 +117,7 @@ window.onclick = (event) => {
     modal.style.display = "none";
   }
 };
+
 
 
 
