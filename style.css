@@ -272,6 +272,17 @@ footer {
     text-align: center;
     white-space: nowrap;      /* ✅ keep items in one row */
   }
+  form {
+    padding: 0 1rem;        /* add even left & right padding */
+  }
+
+  form input,
+  form textarea,
+  form button {
+    box-sizing: border-box; /* include padding + border inside width */
+    width: 100%;            /* take full width properly */
+    margin: 0.5rem 0;       /* keep even spacing */
+  }
 }
 
 #typing-container {
@@ -289,6 +300,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
