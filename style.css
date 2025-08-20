@@ -145,8 +145,15 @@ section h2 {
   background: var(--hover);
 }
 
+#skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* space between items */
+}
+
 .skill-bar {
-  margin: 1rem 0;
+  flex: 1 1 calc(50% - 20px); /* 2 per row */
+  box-sizing: border-box;
 }
 
 .skill-bar span {
@@ -307,17 +314,10 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+* On smaller screens (mobile), make the skills stack */
+@media (max-width: 768px) {
+  .skill-bar {
+    flex: 1 1 100%;
+  }
+}
 
