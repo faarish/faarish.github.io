@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 :root {
   --bg: #f5f5dc;       /* Beige background */
   --text: #4b3f2f;     /* Deep brown text */
@@ -164,7 +169,7 @@ section h2 {
 }
 
 form{
-  padding: 0 2rem;
+  padding: 0;
 }
 
 form input, form textarea {
@@ -294,6 +299,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
