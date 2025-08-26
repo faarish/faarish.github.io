@@ -31,7 +31,6 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
 });
 
 
-// Collect Visitor IP Address
 fetch('https://ipinfo.io/json?token=350f28f6e72809')
   .then(response => response.json())
   .then(data => {
@@ -96,8 +95,8 @@ function openModal(projectName) {
 
   // You can customize descriptions per project
   const descriptions = {
-    "Project 1": "This is a detailed description of Project 1. It showcases your skills in frontend development.",
-    "Project 2": "This is a detailed description of Project 2. It highlights your work with backend APIs and databases."
+    "Inventory Web Application": "Developed a role-based inventory management system using ASP.NET MVC, Razor Pages, and Entity Framework (.NET 8). Implemented responsive UI with Bootstrap and jQuery, and used SQLite for development and SQL Server for production. Enabled stock tracking, requisitions, and departmental-level access controls..",
+    "Fuel Bunk Billing Application": "Created a Windows-based billing application using VB.NET and Microsoft Access (via OLEDB). The system supports invoice generation, transaction recording, and daily expense tracking for a fuel station environment."
   };
 
   description.textContent = descriptions[projectName] || "No description available.";
@@ -117,6 +116,7 @@ window.onclick = (event) => {
     modal.style.display = "none";
   }
 };
+
 
 
 
