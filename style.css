@@ -124,6 +124,18 @@ section h2 {
   display: inline-block;
 }
 
+.project-card,
+.internship-card,
+.skill-bar,
+form,
+.modal-content {
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  background: var(--bg);
+}
+
 
 .project-grid {
   display: flex;
@@ -352,6 +364,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
