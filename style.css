@@ -135,6 +135,22 @@ section h2 {
   overflow: hidden;
 }
 
+
+#work::before {
+  content: "1010101100110010";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  font-size: 2rem;
+  color: rgba(0,255,0,0.05);
+  line-height: 1.5;
+  white-space: pre;
+  transform: rotate(-30deg);
+  animation: matrixMove 20s linear infinite;
+}
+
 .project-grid {
   display: flex;
   flex-wrap: wrap;
@@ -362,6 +378,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
