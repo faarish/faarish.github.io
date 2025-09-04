@@ -1,3 +1,4 @@
+
 // Typing effect
 const typedText = document.getElementById("typed-text");
 const phrases = ["Digital Craftsman", "Product Builder", "Creative Designer", "Technology Explorer", "Future Innovator", "Full-Stack Developer"];
@@ -29,37 +30,20 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
 
-// Fade-in sections on scroll
-const sections = document.querySelectorAll("section");
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
+
+fetch('https://ipinfo.io/json?token=350f28f6e72809')
+  .then(response => response.json())
+  .then(data => {
+    console.log("Visitor IP Address:", data.ip);
+    // You can also display it or send it to your server
+    // Example: document.getElementById("visitor-ip").textContent = data.ip;
+  })
+  .catch(error => {
+    console.error("Error fetching IP address:", error);
   });
-}, { threshold: 0.2 });
 
-sections.forEach(section => observer.observe(section));
 
-// Animate skill bars on scroll
-const skills = document.querySelectorAll(".skill-bar .bar div");
-const skillObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const originalWidth = entry.target.dataset.width;
-      entry.target.style.width = originalWidth;
-    }
-  });
-}, { threshold: 0.5 });
 
-skills.forEach(bar => {
-  const originalWidth = bar.getAttribute("style").match(/width:\\s*(\\d+%)/)[1];
-  bar.dataset.width = originalWidth;
-  bar.style.width = "0";
-  skillObserver.observe(bar);
-});
-
-// Contact form submission
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -80,7 +64,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       alert("❌ Something went wrong. Please try again.");
     }
   })
-  .catch(() => {
+  .catch(error => {
     alert("⚠️ Network error. Please check your connection.");
   });
 
@@ -95,14 +79,48 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   };
 });
 
-// Project modal
+
+const infoModal = document.getElementById("info-modal");
+const closeInfo = document.getElementById("close-info");
+
+
+
 function openModal(projectName) {
   const modal = document.getElementById("project-modal");
   const title = document.getElementById("project-title");
   const description = document.getElementById("project-description");
 
+  // Set dynamic content
   title.textContent = projectName;
 
+  // You can customize descriptions per project
   const descriptions = {
-    "Inventory Web Application": "Developed a role-based inventory management system using ASP.NET MVC, Razor Pages, and Entity Framework (.NET 8). Implemented responsive UI with Bootstrap and jQuery, and used SQLite for development and SQL Server for production.",
-    "Fuel B
+    "Inventory Web Application": "Developed a role-based inventory management system using ASP.NET MVC, Razor Pages, and Entity Framework (.NET 8). Implemented responsive UI with Bootstrap and jQuery, and used SQLite for development and SQL Server for production. Enabled stock tracking, requisitions, and departmental-level access controls..",
+    "Fuel Bunk Billing Application": "Created a Windows-based billing application using VB.NET and Microsoft Access (via OLEDB). The system supports invoice generation, transaction recording, and daily expense tracking for a fuel station environment."
+  };
+
+  description.textContent = descriptions[projectName] || "No description available.";
+
+  // Show modal
+  modal.style.display = "flex";
+}
+
+// Close modal logic
+document.getElementById("close-project").onclick = () => {
+  document.getElementById("project-modal").style.display = "none";
+};
+
+window.onclick = (event) => {
+  const modal = document.getElementById("project-modal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+
+
+
+
+
+
+
