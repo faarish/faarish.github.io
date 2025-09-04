@@ -1,4 +1,3 @@
-
 // Typing effect
 const typedText = document.getElementById("typed-text");
 const phrases = ["Digital Craftsman", "Product Builder", "Creative Designer", "Technology Explorer", "Future Innovator", "Full-Stack Developer"];
@@ -30,42 +29,53 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
 
+// Fetch IP and store in hidden input
+function fetchIP() {
+  return fetch("https://ipinfo.io/json?token=350f28f6e72809")
+    .then(response => response.json())
+    .then(data => {
+      console.log("Visitor IP Address:", data.ip);
+      document.getElementById("ip_address").value = data.ip;
+      return data.ip;
+    })
+    .catch(error => {
+      console.error("Error fetching IP address:", error);
+      return null;
+    });
+}
 
-fetch('https://ipinfo.io/json?token=350f28f6e72809')
-  .then(response => response.json())
-  .then(data => {
-    console.log("Visitor IP Address:", data.ip);
-    document.getElementById("ip_address").value = data.ip;
-  })
-  .catch(error => {
-    console.error("Error fetching IP address:", error);
-  });
-
-
-
-document.getElementById("contact-form").addEventListener("submit", function (e) {
+// Contact form submission
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const form = e.target;
-  const data = new FormData(form);
   const successModal = document.getElementById("success-modal");
   const closeSuccess = document.getElementById("close-success");
+
+  // Ensure IP is filled before sending
+  let ip = document.getElementById("ip_address").value;
+  if (!ip) {
+    ip = await fetchIP();
+    if (ip) document.getElementById("ip_address").value = ip;
+  }
+
+  const data = new FormData(form);
 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     body: data
   })
-  .then(response => {
-    if (response.ok) {
-      form.reset();
-      successModal.style.display = "flex";
-    } else {
-      alert("❌ Something went wrong. Please try again.");
-    }
-  })
-  .catch(error => {
-    alert("⚠️ Network error. Please check your connection.");
-  });
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        successModal.style.display = "flex";
+      } else {
+        alert("❌ Something went wrong. Please try again.");
+      }
+    })
+    .catch(error => {
+      alert("⚠️ Network error. Please check your connection.");
+    });
 
   closeSuccess.onclick = () => {
     successModal.style.display = "none";
@@ -78,29 +88,21 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   };
 });
 
-
-const infoModal = document.getElementById("info-modal");
-const closeInfo = document.getElementById("close-info");
-
-
-
+// Project modal logic
 function openModal(projectName) {
   const modal = document.getElementById("project-modal");
   const title = document.getElementById("project-title");
   const description = document.getElementById("project-description");
 
-  // Set dynamic content
   title.textContent = projectName;
 
-  // You can customize descriptions per project
   const descriptions = {
-    "Inventory Web Application": "Developed a role-based inventory management system using ASP.NET MVC, Razor Pages, and Entity Framework (.NET 8). Implemented responsive UI with Bootstrap and jQuery, and used SQLite for development and SQL Server for production. Enabled stock tracking, requisitions, and departmental-level access controls..",
+    "Inventory Web Application": "Developed a role-based inventory management system using ASP.NET MVC, Razor Pages, and Entity Framework (.NET 8). Implemented responsive UI with Bootstrap and jQuery, and used SQLite for development and SQL Server for production. Enabled stock tracking, requisitions, and departmental-level access controls.",
     "Fuel Bunk Billing Application": "Created a Windows-based billing application using VB.NET and Microsoft Access (via OLEDB). The system supports invoice generation, transaction recording, and daily expense tracking for a fuel station environment."
   };
 
   description.textContent = descriptions[projectName] || "No description available.";
 
-  // Show modal
   modal.style.display = "flex";
 }
 
@@ -115,12 +117,3 @@ window.onclick = (event) => {
     modal.style.display = "none";
   }
 };
-
-
-
-
-
-
-
-
-
