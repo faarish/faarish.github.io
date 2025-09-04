@@ -156,6 +156,18 @@ section h2 {
   to   { transform: translateY(100%) rotate(-30deg); }
 }
 
+
+.project-grid, .internship-card {
+  position: relative;
+  z-index: 1;
+}
+
+.internship-card {
+  margin-top: 2rem;
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 8px;
+}
 .project-grid {
   display: flex;
   flex-wrap: wrap;
@@ -383,6 +395,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
