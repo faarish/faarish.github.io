@@ -77,11 +77,10 @@ nav ul {
   gap: 1rem 2rem;
   margin: 0;
   padding: 0;
+  padding-left: 1rem; 
+  padding-right: 0;
 }
 
-nav ul li {
-  padding-left: 1rem;   /* indentation */ 
-}
 
 nav a {
   text-decoration: none;
@@ -356,4 +355,5 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
