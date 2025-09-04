@@ -205,6 +205,7 @@ form{
 
 form input, form textarea {
   display: block;
+  font-family: inherit;   /* use the same font as the body */
   width: 100%;
   margin: 0.5rem 0;
   padding: 0.75rem;
@@ -356,18 +357,3 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
