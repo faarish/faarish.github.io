@@ -80,8 +80,7 @@ nav ul {
 }
 
 nav ul li {
-  padding-left: 1rem;   /* indentation */
-  padding-right: 1rem;  /* optional, balances spacing */
+  padding-left: 1rem;   /* indentation */ 
 }
 
 nav a {
@@ -357,3 +356,4 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
