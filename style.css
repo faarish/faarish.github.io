@@ -169,6 +169,25 @@ section h2 {
   overflow: hidden;
 }
 
+a {
+  color: var(--accent);       /* visible in light mode */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--hover);        /* hover effect */
+  text-decoration: underline;
+}
+
+body.dark a {
+  color: var(--accent);       /* override for dark mode */
+}
+
+body.dark a:hover {
+  color: var(--hover);
+}
+
 .bar div {
   background: var(--accent);
   height: 100%;
@@ -315,6 +334,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
