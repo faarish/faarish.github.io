@@ -151,6 +151,11 @@ section h2 {
   animation: matrixMove 20s linear infinite;
 }
 
+@keyframes matrixMove {
+  from { transform: translateY(0) rotate(-30deg); }
+  to   { transform: translateY(100%) rotate(-30deg); }
+}
+
 .project-grid {
   display: flex;
   flex-wrap: wrap;
@@ -378,6 +383,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
