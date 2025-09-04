@@ -124,50 +124,7 @@ section h2 {
   display: inline-block;
 }
 
-#work {
-  padding: 2rem;
-  border-radius: 8px;
-  background: radial-gradient(circle at top left, rgba(0,255,128,0.1) 0%, transparent 50%),
-              radial-gradient(circle at bottom right, rgba(0,128,255,0.1) 0%, transparent 50%),
-              #0a0a0a; /* dark computer-science feel */
-  color: #f5f5f5;
-  position: relative;
-  overflow: hidden;
-}
 
-
-#work::before {
-  content: "1010101100110010";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  font-size: 2rem;
-  color: rgba(0,255,0,0.05);
-  line-height: 1.5;
-  white-space: pre;
-  transform: rotate(-30deg);
-  animation: matrixMove 20s linear infinite;
-}
-
-@keyframes matrixMove {
-  from { transform: translateY(0) rotate(-30deg); }
-  to   { transform: translateY(100%) rotate(-30deg); }
-}
-
-
-.project-grid, .internship-card {
-  position: relative;
-  z-index: 1;
-}
-
-.internship-card {
-  margin-top: 2rem;
-  background: rgba(255,255,255,0.05);
-  padding: 1rem;
-  border-radius: 8px;
-}
 .project-grid {
   display: flex;
   flex-wrap: wrap;
@@ -395,6 +352,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
