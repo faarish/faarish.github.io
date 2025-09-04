@@ -269,6 +269,23 @@ footer {
   border-top: 1px solid var(--accent);
 }
 
+.social-links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-links svg {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.social-links svg:hover {
+  transform: scale(1.1);
+}
+
+
 
 /* Tablet + Mobile: logo on line 1, links on line 2 spread across */
 /* Tablet + Mobile: logo first line, links second line */
@@ -334,6 +351,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
