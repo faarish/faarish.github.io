@@ -37,9 +37,9 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg);
-  transition: background-color 0.5s ease, color 0.5s ease;
   color: var(--text);
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -111,6 +111,11 @@ p {
   color: var(--para-color);
 }
 
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
 
 section h2 {
   font-size: 1.8rem;
@@ -127,7 +132,6 @@ form,
   border: 1px solid rgba(0,0,0,0.05);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 1rem;
   background: var(--bg);
 }
@@ -195,6 +199,12 @@ body.dark a {
 
 body.dark a:hover {
   color: var(--hover);
+}
+
+.bar div {
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.5s ease-in-out;
 }
 
 form{
@@ -354,18 +364,4 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
