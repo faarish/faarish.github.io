@@ -13,6 +13,32 @@ function type() {
   }
 }
 
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+sections.forEach(section => observer.observe(section));
+
+const skills = document.querySelectorAll(".skill-bar .bar div");
+const skillObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.getAttribute("style").match(/width:\s*(\d+%)/)[1];
+    }
+  });
+}, { threshold: 0.5 });
+
+skills.forEach(bar => {
+  bar.style.width = "0"; // reset before animating
+  skillObserver.observe(bar);
+});
+
+
 function erase() {
   if (charIndex > 0) {
     typedText.textContent = phrases[index].substring(0, --charIndex);
@@ -116,6 +142,7 @@ window.onclick = (event) => {
     modal.style.display = "none";
   }
 };
+
 
 
 
