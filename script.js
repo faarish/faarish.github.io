@@ -35,8 +35,7 @@ fetch('https://ipinfo.io/json?token=350f28f6e72809')
   .then(response => response.json())
   .then(data => {
     console.log("Visitor IP Address:", data.ip);
-    // You can also display it or send it to your server
-    // Example: document.getElementById("visitor-ip").textContent = data.ip;
+    document.getElementById("ip_address").value = data.ip;
   })
   .catch(error => {
     console.error("Error fetching IP address:", error);
@@ -116,6 +115,7 @@ window.onclick = (event) => {
     modal.style.display = "none";
   }
 };
+
 
 
 
