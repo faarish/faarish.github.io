@@ -157,6 +157,10 @@ section h2 {
   padding-right: 10px;   /* space for scrollbar */
 }
 
+.skills-scroll-wrapper {
+  position: relative;
+}
+
 .skill-bar {
   flex: 1 1 calc(50% - 20px); /* 2 per row */
   box-sizing: border-box;
@@ -180,19 +184,21 @@ section h2 {
 }
 
 /* Optional: custom scrollbar styling */
-#skills::-webkit-scrollbar {
+.skills-container::-webkit-scrollbar {
   width: 8px;
 }
-#skills::-webkit-scrollbar-thumb {
-  background: rgba(100, 100, 100, 0.4);
+.skills-container::-webkit-scrollbar-track {
+  background: var(--bg); /* matches theme */
+}
+.skills-container::-webkit-scrollbar-thumb {
+  background: rgba(39, 30, 55, 0.7);
   border-radius: 4px;
+  transition: background 0.3s ease;
 }
-#skills::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 100, 100, 0.6);
+.skills-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(39, 30, 55, 1);
 }
-#skills::-webkit-scrollbar-track {
-  background: transparent;
-}
+
 
 a {
   color: var(--accent);       /* visible in light mode */
@@ -377,6 +383,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
