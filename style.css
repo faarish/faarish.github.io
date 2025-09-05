@@ -180,7 +180,16 @@ section h2 {
 }
 
 #skills {
-  padding: 1rem;
+  max-width: 900px;   /* or match the width of other sections */
+  margin: 0 auto;     /* center it horizontally */
+  padding: 1.5rem;    /* same spacing as other sections */
+  box-sizing: border-box;
+}
+
+
+.skills-scroll-wrapper {
+  max-width: 100%;    /* prevent wrapper from stretching */
+  overflow: hidden;
 }
 
 /* Optional: custom scrollbar styling */
@@ -405,6 +414,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
