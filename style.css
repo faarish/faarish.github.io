@@ -172,6 +172,27 @@ section h2 {
   overflow: hidden;
 }
 
+#skills {
+  max-height: 400px;   /* limit height */
+  overflow-y: auto;    /* enable vertical scroll if too long */
+  padding-right: 10px; /* space for scrollbar */
+}
+
+/* Optional: custom scrollbar styling */
+#skills::-webkit-scrollbar {
+  width: 8px;
+}
+#skills::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.4);
+  border-radius: 4px;
+}
+#skills::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.6);
+}
+#skills::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 a {
   color: var(--accent);       /* visible in light mode */
   text-decoration: none;
@@ -355,5 +376,6 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
