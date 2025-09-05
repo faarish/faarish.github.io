@@ -152,6 +152,9 @@ section h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px; /* space between skills */
+  max-height: 400px;     /* limit height */
+  overflow-y: auto;      /* vertical scroll */
+  padding-right: 10px;   /* space for scrollbar */
 }
 
 .skill-bar {
@@ -173,9 +176,7 @@ section h2 {
 }
 
 #skills {
-  max-height: 400px;   /* limit height */
-  overflow-y: auto;    /* enable vertical scroll if too long */
-  padding-right: 10px; /* space for scrollbar */
+  padding: 1rem;
 }
 
 /* Optional: custom scrollbar styling */
@@ -376,6 +377,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
