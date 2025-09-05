@@ -117,3 +117,26 @@ window.onclick = (event) => {
     modal.style.display = "none";
   }
 };
+
+const skillsContainer = document.querySelector(".skills-container");
+const topGradient = document.querySelector(".top-gradient");
+const bottomGradient = document.querySelector(".bottom-gradient");
+
+skillsContainer.addEventListener("scroll", () => {
+  // Hide top gradient when scrolled to top
+  if (skillsContainer.scrollTop === 0) {
+    topGradient.style.opacity = "0";
+  } else {
+    topGradient.style.opacity = "1";
+  }
+
+  // Hide bottom gradient when scrolled to bottom
+  if (skillsContainer.scrollHeight - skillsContainer.scrollTop === skillsContainer.clientHeight) {
+    bottomGradient.style.opacity = "0";
+  } else {
+    bottomGradient.style.opacity = "1";
+  }
+});
+
+// Initialize on load
+skillsContainer.dispatchEvent(new Event("scroll"));
