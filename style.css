@@ -2,21 +2,20 @@
   box-sizing: border-box;
 }
 
-
 :root {
-  --bg: #f5f5dc;       /* Beige background */
-  --text: #4b3f2f;     /* Deep brown text */
-  --accent: #a67c52;   /* Medium brown accent */
-  --hover: #c8a97e;    /* Light brown hover */
-  --para-color: black;      
- }
+  --bg: #f5f5dc;
+  --text: #4b3f2f;
+  --accent: #a67c52;
+  --hover: #c8a97e;
+  --para-color: black;
+}
 
 body.dark {
   --bg: #4b3f2f;
   --text: #f5f5dc;
   --accent: #c8a97e;
   --hover: #a67c52;
-  --para-color: white;         
+  --para-color: white;
 }
 
 body.dark nav {
@@ -24,13 +23,13 @@ body.dark nav {
               radial-gradient(circle at top right, #1f2e1f 0%, transparent 60%),
               radial-gradient(circle at bottom left, #1f2e1f 0%, transparent 60%),
               radial-gradient(circle at bottom right, #1f2e1f 0%, transparent 60%),
-              #3b4d3b; /* lighter middle */
+              #3b4d3b;
 }
 
 body.dark form input,
 body.dark form textarea {
-  background: #2e2e2e;       /* Dark background for inputs */  
-  border: 1px solid #c8a97e; /* Accent border */
+  background: #2e2e2e;
+  border: 0.0625rem solid #c8a97e; /* 1px */
 }
 
 body {
@@ -55,16 +54,14 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-  flex-wrap: nowrap;  /* ✅ prevent wrapping on desktop */
-   background: radial-gradient(circle at top left, #6b8f71 0%, transparent 60%),
+  box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,0.1); /* 2px 5px */
+  flex-wrap: nowrap;
+  background: radial-gradient(circle at top left, #6b8f71 0%, transparent 60%),
               radial-gradient(circle at top right, #6b8f71 0%, transparent 60%),
               radial-gradient(circle at bottom left, #6b8f71 0%, transparent 60%),
               radial-gradient(circle at bottom right, #6b8f71 0%, transparent 60%),
-              #d6e0c4; /* light center */
+              #d6e0c4;
 }
-
 
 nav h1 {
   margin: 0;
@@ -77,10 +74,9 @@ nav ul {
   gap: 1rem 2rem;
   margin: 0;
   padding: 0;
-  padding-left: 1rem; 
+  padding-left: 1rem;
   padding-right: 0;
 }
-
 
 nav a {
   text-decoration: none;
@@ -116,14 +112,14 @@ p {
 
 section {
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 62.5rem; /* 1000px */
   margin: auto;
 }
 
 section h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 0.125rem solid var(--accent); /* 2px */
   display: inline-block;
 }
 
@@ -137,7 +133,7 @@ section h2 {
   background: var(--accent);
   color: var(--bg);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem; /* 8px */
   cursor: pointer;
   flex: 1 1 45%;
   transition: transform 0.3s, background 0.3s;
@@ -147,10 +143,11 @@ section h2 {
   transform: scale(1.05);
   background: var(--hover);
 }
+
 /* Skills Section Wrapper */
 #skills {
-  max-width: 900px;     /* match Projects/About/etc. */
-  margin: 0 auto;       /* center align */
+  max-width: 56.25rem; /* 900px */
+  margin: 0 auto;
   padding: 1.5rem;
   box-sizing: border-box;
 }
@@ -158,7 +155,7 @@ section h2 {
 /* Scrollable Container */
 .skills-scroll-wrapper {
   position: relative;
-  max-width: 100%;      /* prevent stretching beyond section width */
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -166,16 +163,16 @@ section h2 {
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;            /* space between skills */
-  max-height: 400px;    /* limit height */
-  overflow-y: auto;     /* enable vertical scroll */
-  padding-right: 10px;  /* breathing room for scrollbar */
-  scrollbar-gutter: stable; /* ✅ prevents scrollbar from resizing width */
+  gap: 1.25rem; /* 20px */
+  max-height: 25rem; /* 400px */
+  overflow-y: auto;
+  padding-right: 0.625rem; /* 10px */
+  scrollbar-gutter: stable;
 }
 
 /* Individual Skill Bar */
 .skill-bar {
-  flex: 1 1 calc(50% - 20px); /* two per row on desktop */
+  flex: 1 1 calc(50% - 1.25rem); /* 20px */
   box-sizing: border-box;
 }
 
@@ -186,21 +183,21 @@ section h2 {
 
 .bar {
   background: #ddd;
-  height: 10px;
-  border-radius: 5px;
+  height: 0.625rem; /* 10px */
+  border-radius: 0.3125rem; /* 5px */
   overflow: hidden;
 }
 
 /* Scrollbar Styling */
 .skills-container::-webkit-scrollbar {
-  width: 8px;
+  width: 0.5rem; /* 8px */
 }
 .skills-container::-webkit-scrollbar-track {
-  background: var(--bg); /* match theme background */
+  background: var(--bg);
 }
 .skills-container::-webkit-scrollbar-thumb {
   background: rgba(39, 30, 55, 0.7);
-  border-radius: 4px;
+  border-radius: 0.25rem; /* 4px */
   transition: background 0.3s ease;
 }
 .skills-container::-webkit-scrollbar-thumb:hover {
@@ -208,18 +205,18 @@ section h2 {
 }
 
 a {
-  color: var(--accent);       /* visible in light mode */
+  color: var(--accent);
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
-  color: var(--hover);        /* hover effect */
+  color: var(--hover);
   text-decoration: underline;
 }
 
 body.dark a {
-  color: var(--accent);       /* override for dark mode */
+  color: var(--accent);
 }
 
 body.dark a:hover {
@@ -232,18 +229,18 @@ body.dark a:hover {
   transition: width 0.5s ease-in-out;
 }
 
-form{
+form {
   padding: 0;
 }
 
 form input, form textarea {
   display: block;
-  font-family: inherit;   /* use the same font as the body */
+  font-family: inherit;
   width: 100%;
   margin: 0.5rem 0;
   padding: 0.75rem;
-  border: 1px solid var(--accent);
-  border-radius: 4px;
+  border: 0.0625rem solid var(--accent); /* 1px */
+  border-radius: 0.25rem; /* 4px */
   background: #fff;
   color: var(--text);
   font-size: 1rem;
@@ -251,7 +248,7 @@ form input, form textarea {
 
 form textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 6.25rem; /* 100px */
 }
 
 button {
@@ -261,7 +258,7 @@ button {
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 0.25rem; /* 4px */
   transition: background 0.3s;
 }
 
@@ -284,17 +281,17 @@ button:hover {
   background: var(--bg);
   color: var(--text);
   padding: 2rem;
-  border-radius: 8px;
-  max-width: 500px;
+  border-radius: 0.5rem; /* 8px */
+  max-width: 31.25rem; /* 500px */
   width: 90%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 0.625rem rgba(0,0,0,0.3); /* 10px */
   position: relative;
 }
 
 .close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 0.625rem; /* 10px */
+  right: 0.9375rem; /* 15px */
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--accent);
@@ -305,13 +302,13 @@ footer {
   padding: 1rem;
   background: var(--bg);
   color: var(--text);
-  border-top: 1px solid var(--accent);
+  border-top: 0.0625rem solid var(--accent); /* 1px */
 }
 
 .social-links {
   margin-top: 0.5rem;
   display: flex;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
   justify-content: center;
 }
 
@@ -324,18 +321,14 @@ footer {
   transform: scale(1.1);
 }
 
-
-
-/* Tablet + Mobile: logo on line 1, links on line 2 spread across */
-/* Tablet + Mobile: logo first line, links second line */
+/* Tablet + Mobile */
 @media (max-width: 1024px) {
-
   header {
     padding: 0.5rem;
-}
+  }
   
   nav {
-    flex-direction: column;   /* stack vertically */
+    flex-direction: column;
     align-items: center;
     padding: 1rem 0;
   }
@@ -348,38 +341,36 @@ footer {
 
   nav ul {
     display: flex;
-    flex-wrap: nowrap;        /* ✅ prevent wrapping */
-    justify-content: space-between;  /* ✅ center horizontally */
+    flex-wrap: nowrap;
+    justify-content: space-between;
     width: 100%;
-    overflow-x: auto;         /* ✅ allow horizontal scroll if too many links */
+    overflow-x: auto;
     gap: 1rem 0.5rem;
     margin: 0rem;
     padding: 1rem 0;
-    
   }
 
   nav ul li {
-    flex: unset;              /* don’t stretch, keep natural width */
+    flex: unset;
     text-align: center;
-    white-space: nowrap;      /* ✅ keep items in one row */
+    white-space: nowrap;
   }
-  
 }
 
 #typing-container {
-  min-height: 1.5em; /* ✅ reserve height */
+  min-height: 1.5em;
 }
 
 .cursor {
   display: inline-block;
-  margin-left: 2px;
+  margin-left: 0.125rem; /* 2px */
   color: var(--text);
   animation: blink 0.7s infinite;
 }
 
 @media (max-width: 768px) {
   .project-card {
-    flex: 1 1 100%;   /* on small screens: 1 per row */
+    flex: 1 1 100%;
   }
   .skill-bar {
     flex: 1 1 100%;
@@ -390,11 +381,3 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-
-
-
-
-
-
-
-
