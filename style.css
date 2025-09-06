@@ -85,8 +85,11 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: var(--accent);
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color: var(--accent);   /* keep the hover color */
+  text-decoration: none;  /* 🚫 prevent underline */
 }
 
 #theme-toggle {
@@ -381,3 +384,4 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
