@@ -147,29 +147,41 @@ section h2 {
   transform: scale(1.05);
   background: var(--hover);
 }
+/* Skills Section Wrapper */
+#skills {
+  max-width: 900px;     /* match Projects/About/etc. */
+  margin: 0 auto;       /* center align */
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
 
+/* Scrollable Container */
+.skills-scroll-wrapper {
+  position: relative;
+  max-width: 100%;      /* prevent stretching beyond section width */
+  overflow: hidden;
+}
+
+/* Skills List (scrollable area) */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* space between skills */
-  max-height: 400px;     /* limit height */
-  overflow-y: auto;      /* vertical scroll */
-  padding-right: 10px;   /* space for scrollbar */
+  gap: 20px;            /* space between skills */
+  max-height: 400px;    /* limit height */
+  overflow-y: auto;     /* enable vertical scroll */
+  padding-right: 10px;  /* breathing room for scrollbar */
+  scrollbar-gutter: stable; /* ✅ prevents scrollbar from resizing width */
 }
 
-.skills-scroll-wrapper {
-  position: relative;
-}
-
+/* Individual Skill Bar */
 .skill-bar {
-  flex: 1 1 calc(50% - 20px); /* 2 per row */
+  flex: 1 1 calc(50% - 20px); /* two per row on desktop */
   box-sizing: border-box;
 }
 
 .skill-bar span {
   display: block;
   margin-bottom: 0.3rem;
- /* font-weight: bold;  */
 }
 
 .bar {
@@ -179,25 +191,12 @@ section h2 {
   overflow: hidden;
 }
 
-#skills {
-  max-width: 900px;   /* or match the width of other sections */
-  margin: 0 auto;     /* center it horizontally */
-  padding: 1.5rem;    /* same spacing as other sections */
-  box-sizing: border-box;
-}
-
-
-.skills-scroll-wrapper {
-  max-width: 100%;    /* prevent wrapper from stretching */
-  overflow: hidden;
-}
-
-/* Optional: custom scrollbar styling */
+/* Scrollbar Styling */
 .skills-container::-webkit-scrollbar {
   width: 8px;
 }
 .skills-container::-webkit-scrollbar-track {
-  background: var(--bg); /* matches theme */
+  background: var(--bg); /* match theme background */
 }
 .skills-container::-webkit-scrollbar-thumb {
   background: rgba(39, 30, 55, 0.7);
@@ -207,29 +206,6 @@ section h2 {
 .skills-container::-webkit-scrollbar-thumb:hover {
   background: rgba(39, 30, 55, 1);
 }
-
-/* Gradient overlays */
-.top-gradient,
-.bottom-gradient {
-  position: absolute;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.top-gradient {
-  top: 0;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--bg), transparent);
-}
-
-.bottom-gradient {
-  bottom: 0;
-  height: 60px;
-  background: linear-gradient(to top, var(--bg), transparent);
-}
-
 
 a {
   color: var(--accent);       /* visible in light mode */
@@ -414,6 +390,7 @@ footer {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 
 
